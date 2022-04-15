@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  background: linear-gradient(60deg, #023e8a, #0077b6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    height: 100vh;
+}
+  
+.form {
+    background-color: #15172b;
+    border-radius: 20px;
+    height: 500px;
+    width: 320px;
+    padding: 20px;    
+}
+  
+.title {
+    color: #eee;
+    font-family: sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.subtitle {
+    color: #eee;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+  
+.input-container {
+    height: 50px;
+    position: relative;
+    width: 100%;
+}
+
+div:nth-child(3){
+    margin-top: 40px;
+}
+
+div:nth-child(4){
+    margin-top: 30px;
+}
+
+div:nth-child(5){
+  margin-top: 30px;
+}
+  
+.input-container input[type='text'] {
+  background-color: #303245;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  font-size: 18px;
+  height: 100%;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 100%;
+}
+
+.input-container label {
+  color: #65657b;
+  left: 20px;
+  position: absolute;
+  transition: transform 200ms, color 200ms;
+  top: 15px;
+  transform-origin: 0 50%;
+}
+.input-container label::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #15172b;
+  width: 80px;
+  height: 20px;
+  transition: transform 200ms;
+  transform: translateY(0);
+  border-radius: 10px;
+  z-index: -1;
+}
+.input-container label.short::before {
+  width: 45px;
+}
+  
+
+  input[type='text']:focus ~  label::before
+ {
+    transform: translateY(40px);
+  }
+  
+  
+  input[type='text']:focus ~ label{
+    transform: translateY(-25px) scale(0.75);
+  }
+  
+  input[type='text']:focus ~ label {
+    color: white;
+  }
+  
+  .submit {
+    background-color: #08d;
+    border-radius: 12px;
+    border: 0;
+    color: #eee;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    margin-top: 38px;
+    outline: 0;
+    text-align: center;
+    width: 100%;
+    transition: .5s;
+  }
+  
+  .submit:hover {
+    background-color: #06b;
+  }
